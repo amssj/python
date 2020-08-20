@@ -1,0 +1,54 @@
+age = [22, 25, 23, 28,26]
+meanage = sum(age)/len(age)
+print(meanage)
+type(meanage)
+age[2]
+print(age[2])
+name = ['John','Bas','Anne','Sheila','Mark']
+i = 3
+print(name[i])
+print(age[i])
+
+## appending new items
+mijnlijst = ["element 1", "element 2"]
+anotherone = "element 3"
+mijnlijst.append(anotherone)
+print(mijnlijst)
+
+## merge all items from a second list into the first one
+mijnlijst = ["element 1", "element 2"]
+anotherone = ["element 3", "element4"]
+mijnlijst.extend(anotherone)
+print(mijnlijst)
+
+## distionary/separate by commas, and keys and values by a colon
+nameage = {"John":22, "Bas": 25,"Anne":23, "Sheila":28, "Mark": 26}
+print(nameage["Sheila"])
+
+mydict = {"whatever":42, "something": 11}
+mydict["somethingelse"] = 76
+print(mydict)
+
+hi = "Hello world"
+print("The string",hi, "has", len(hi), "characters")
+opdetap = ["Estaminet","Steenbrugge Blood",'Palm' ]
+print("They serve", len(opdetap),'different beers')
+
+### writing you own functions
+def averageage(agelist): ### it is important not to neglet the :
+    y = sum(agelist)/len(agelist)
+    return y
+ages = [22,24,23,23,24]
+averageage(ages)
+print(averageage(ages))
+
+##Mehods (built-in function)
+hi = "Hello world OUT THERE"
+print(hi.lower())
+print("TESTtttt".lower()) ####!!!!!!it is very important not to neglet the ()
+
+## Loop
+alltweets = ["Great lecture at the UvA", "I Hate You!", "I want Beer"]
+for tweet in alltweets: # Note that the name tweet is completely arbitrary chosen, while for and in are mandatory statements.
+    print(tweet.lower())
+

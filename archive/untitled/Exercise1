@@ -1,0 +1,68 @@
+##What tags generate the most comments/votes/views?
+
+import json
+from collections import Counter
+from collections import defaultdict
+with open ('/Users/xiaogo627301968qq.com/exercise1/xhamster.json') as f:
+    data = json.load(f)
+
+
+
+# atags = []
+# for key, value in data.items():
+#     atags.extend(value["channels"])
+#
+# c = Counter(atags)
+# print(c.most_common(100))
+#
+# l = len(atags)
+# print(l)
+# print("Thus, we have an averge of", l/len(data),"tags per video")
+#
+#
+#
+# what is the average length of a video description?
+# descriptions = []
+# i = 0
+# for key, value in data.items():
+#     i += 1
+#     descriptions.extend(value["description"])
+#
+#
+# dl = len(descriptions)
+# print("Thus, we have an average of", dl/i, "descriptions per video") ##计算i和len(data)的结果不一致
+#
+##5. what are the most frequently used words in the description?
+# allwords = []
+# for key, value in data.items():
+#     allwords.extend(value["description"].split())
+# c2 = Counter(allwords)
+# print(c2.most_common(100))
+
+
+# for v in data.values( ):
+#     print(v["channels"])
+
+import random
+
+# for k in data.keys( ):
+#     print(data[k]['channels'])
+
+
+# from collections import defaultdict
+#
+# commentspercat = defaultdict(int)
+#
+# for k, v in data.items():
+#     for tag in v["channels"]:
+#         try:
+#             commentspercat[tag]+=int(v['nb_comments'])
+#         except:
+#             pass
+# print(commentspercat)
+allwords = []
+for k, v in data.items():
+    allwords += v['description'].split()
+
+c2 = Counter(allwords)
+print(c2.most_common(100))
